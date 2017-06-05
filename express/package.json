@@ -1,0 +1,19 @@
+{
+  "name": "HelloExpress",
+  "version": "1.0.0",
+  "description": "Hello express project",
+  "repository": {
+	  "private": true
+	},
+  "main": "hello_express.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bruce Lu",
+  "license": "ISC"
+}

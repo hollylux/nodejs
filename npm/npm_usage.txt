@@ -1,0 +1,161 @@
+
+## npm usage guide
+	https://stackoverflow.com/documentation/node.js/482/npm
+	
+## examples
+	npm install <package-name>
+	# or
+	npm i <package-name>...
+
+	# e.g. to install lodash and express
+	npm install lodash express
+	
+	npm install --save <name> # Install dependencies 
+	# or
+	npm install -S <name> # shortcut version --save 
+	# or
+	npm i -S <name>
+	
+	Some modules do not only provide a library for you to use, but they also provide one or more binaries which are intended to be used via the command line. Although you can still install those packages locally, it is often preferred to install them globally so the command-line tools can be enabled. In that case, npm will automatically link the binaries to appropriate paths (e.g. /usr/local/bin/<name>) so they can be used from the command line. To install a package globally, use:
+
+	npm install --global <name>
+	# or
+	npm install -g <name>
+	# or
+	npm i -g <name>
+
+	# e.g. to install the grunt command line tool
+	npm install -g grunt-cli
+	If you want to see a list of all the installed packages and their associated versions in the current workspace, use:
+
+	npm list
+	npm list <name>
+	
+	In order to install packages and save them only if they are needed for development, not for running them, not if they are needed for the application to run, follow the following command:
+
+	npm install --save-dev <name> # Install dependencies for development purposes
+	# or
+	npm install -D <name> # shortcut version --save-dev
+	# or
+	npm i -D <name>
+	
+	If you already have a package.json file in your current working directory and dependencies are defined in it, then npm install will automatically resolve and install all dependencies listed in the file. You can also use the shorthand version of the npm install command which is: npm i
+	
+	npm install <name>@<version>
+	# e.g. to install version 4.11.1 of the package lodash
+	npm install lodash@4.11.1
+	npm install <name>@latest
+	
+	npm install <tarball file>
+	npm install <tarball url>
+
+	# packages available locally
+	npm install <local path>
+
+	# packages available as a git repository
+	npm install <git remote url>
+
+	# packages available on GitHub
+	npm install <username>/<repository>
+
+	# packages from a specific repository
+	npm install --registry=http://myreg.mycompany.com <package name>
+
+	# packages from a related group of packages 
+	# See npm scope
+	npm install @<scope>/<name>(@<version>)
+
+	# Scoping is useful for separating private packages hosted on private registry from
+	# public ones by setting registry for specific scope
+	npm config set @mycompany:registry http://myreg.mycompany.com
+	npm install @mycompany/<package name>
+	
+	To uninstall one or more locally installed packages, use:
+
+	npm uninstall <package name>
+	The uninstall command for npm has five aliases that can also be used:
+
+	npm remove <package name>
+	npm rm <package name>
+	npm r <package name>
+
+	npm unlink <package name>
+	npm un <package name>
+	
+	npm uninstall --save <package name>
+	npm uninstall -S <package name>
+	npm uninstall --save-dev <package name>
+	npm uninstall -D <package name>
+	npm uninstall --save-optional <package name>
+	npm uninstall -O <package name>
+	npm uninstall -g <package name>
+	
+	Removing extraneous packages
+	
+	To remove extraneous packages (packages that are installed but not in dependency list) run the following command:
+
+	npm prune
+	To remove all dev packages add --production flag:
+
+	npm prune --production
+	
+	setting up package configuration package.json
+	npm init
+	or
+	npm init --yes | -y // to accept the default values
+	
+	If you're creating a package.json for a project that you are not going to be publishing as an npm package (i.e. solely for the purpose of rounding up your dependencies), you can convey this intent in your package.json file:
+
+	Optionally set the private property to true to prevent accidental publishing.
+	Optionally set the license property to "UNLICENSED" to deny others the right to use your package.
+	To install a package and automatically save it to your package.json, use:
+	npm install --save <package>
+	
+	Get rid of warning messages when installing or upgrading packages
+	"description": "No description",
+	"repository": {
+	  "private": true
+	},
+	
+	
+	Running scripts
+
+	You may define scripts in your package.json, for example:
+
+	{
+	  "name": "your-package",
+	  "version": "1.0.0",
+	  "description": "",
+	  "main": "index.js",
+	  "author": "",
+	  "license": "ISC",
+	  "dependencies": {},
+	  "devDependencies": {},
+	  "scripts": {
+		"echo": "echo hello!"
+	  }
+	}
+	
+	To run the echo script, run npm run echo from the command line.
+	
+	npm scripts are used most often for things like starting a server, building the project, and running tests. Here's a more realistic example:
+
+	  "scripts": {
+		"test": "mocha tests",
+		"start": "pm2 start index.js"
+	  }
+	  
+	If your scripts become very long, they can be split into parts, like this:
+
+	  "scripts": {
+		"very-complex-command": "npm run chain-1 && npm run chain-2",
+		"chain-1": "webpack",
+		"chain-2": "node app.js"
+	  }
+	  
+	Versioning
+		patch release: npm version patch => 1.0.1
+		minor release: npm version minor => 1.1.0
+		major release: npm version major => 2.0.0
+		
+	
