@@ -3,6 +3,10 @@
 	https://stackoverflow.com/documentation/node.js/340/getting-started-with-node-js
 	
 ## Steps 
-	- Create js file 
-	- run npm install --save express 
+	- Create hello_express.js file 
+	- npm init -y
+	- npm install --save express 
+	- node hello_express.js
 	- http://localhost:3000/
+	
+	
