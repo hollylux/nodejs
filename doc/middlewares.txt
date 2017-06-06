@@ -1,0 +1,22 @@
+
+## MongoDB
+	- http://mongoosejs.com/
+	
+## HTML Template
+	- Pug(was Jade) https://pugjs.org/api/getting-started.html
+	- Vash 
+	
+## Automation
+	- http://gruntjs.com/plugins
+	
+	
+## Ref http://www.tutorialsteacher.com/nodejs/
+
+## Books
+	Node.js Design Patterns - Second Edition
+	Web Development with MongoDB and Node.js
+	Node.js the Right Way
+	Web Development with Node and Express
+	
+	
+	

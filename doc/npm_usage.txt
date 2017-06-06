@@ -21,6 +21,9 @@
 	npm install --global <name>
 	# or
 	npm install -g <name>
+	npm install -g node-inspector
+	node-inspector or node-inspector --web-port=5500
+	node --debug-brk app.js
 	# or
 	npm i -g <name>
 

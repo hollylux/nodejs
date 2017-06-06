@@ -1,0 +1,22 @@
+
+## Followed this guide
+	https://stackoverflow.com/documentation/node.js/340/getting-started-with-node-js
+	
+## Steps 
+	- Create the file 
+	- node hello.js
+	- http://localhost:1337/
+	
+## debug
+	add debugger; to the line to debug
+	node debug app.js // cmd line mode; cmd: next, cont, watch('expression')
+	or
+	npm install -g node-inspector
+	node-inspector or node-inspector --web-port=5500
+	node --debug-brk app.js
+	
+	ref: http://www.tutorialsteacher.com/nodejs/debug-nodejs-application
+		 http://www.tutorialsteacher.com/nodejs/node-inspector
+		 
+
+	
