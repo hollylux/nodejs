@@ -1,6 +1,8 @@
 
 ## MongoDB
 	- http://mongoosejs.com/
+	npm install mongoose --save // more elegant
+	npm install mongodb --save
 	
 ## HTML Template
 	- Pug(was Jade) https://pugjs.org/api/getting-started.html
@@ -8,6 +10,10 @@
 	
 ## Automation
 	- http://gruntjs.com/plugins
+	- auto load js file changes: https://nodemon.io/
+	
+## Parser
+	npm install body-parser --save
 	
 	
 ## Ref http://www.tutorialsteacher.com/nodejs/

@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Hello express project",
   "repository": {
-	  "private": true
-	},
+    "private": true
+  },
   "main": "hello_express.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.4"
   },
   "devDependencies": {},
   "scripts": {

@@ -9,4 +9,9 @@
 	- node hello_express.js
 	- http://localhost:3000/
 	
+## connect to MongoDB
+	npm install mongodb --save
+	or
+	npm install mongoose --save // more elegant way to operate mongodb
+	
 	

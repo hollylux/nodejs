@@ -1,0 +1,31 @@
+
+## Setup & run on windows 7
+	run cmd as administrator
+	download and install
+	create a data folder under C:\Program Files\MongoDB\Server\3.4
+	cd C:\Program Files\MongoDB\Server\3.4\bin
+	mongod --dbpath ../data
+	
+## Use mongo client to connect to mongo db 
+	cd C:\Program Files\MongoDB\Server\3.4\bin
+	mongo
+	db // list db being used
+	show dbs // list all dbs
+	use test // test is a default db 
+	use bluedb
+	db.Express.insertOne({id:1,'label':'613933397380'})
+	db.Express.find()
+	db['Express'].find()
+	db.getCollection("Express").find()
+	
+	db.getCollectionNames()
+	
+	
+	# ref: https://docs.mongodb.com/manual/mongo/
+	
+
+	
+	
+	
+	
+	
