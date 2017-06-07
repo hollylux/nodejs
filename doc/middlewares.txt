@@ -1,6 +1,6 @@
 
 ## MongoDB
-	- http://mongoosejs.com/
+	- http://mongoosejs.com/ 
 	npm install mongoose --save // more elegant
 	npm install mongodb --save
 	

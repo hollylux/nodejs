@@ -9,19 +9,40 @@
 ## Use mongo client to connect to mongo db 
 	cd C:\Program Files\MongoDB\Server\3.4\bin
 	mongo
-	db // list db being used
-	show dbs // list all dbs
-	use test // test is a default db 
-	use bluedb
-	db.Express.insertOne({id:1,'label':'613933397380'})
-	db.Express.find()
-	db['Express'].find()
-	db.getCollection("Express").find()
 	
-	db.getCollectionNames()
+	# Create
+		db.Express.insertOne({id:1,'label':'613933397380'})
+	
+	# Read
+		db // list db being used
+		show dbs // list all dbs
+		use test // test is a default db 
+		use bluedb
+		db.Express.find()
+		db['Express'].find()
+		db.getCollection("Express").find()
+		
+		db.getCollectionInfos()
+		db.getCollectionNames()
+		
+	# Update
+		db.Express.updateOne({id:1},{$set:{'date':'20170607'}})
+	
+	# Delete
+		db.Express.deleteOne({'label':"613933397380"})
+		db.Express.deleteMany({id:1})
+		db.Express.drop() // drop collection
+		db.dropDatabase() // drop db
+		
 	
 	
-	# ref: https://docs.mongodb.com/manual/mongo/
+	
+	
+## cmd ref
+	https://docs.mongodb.com/manual/reference/method/
+	https://docs.mongodb.com/manual/mongo/
+	
+	
 	
 
 	
