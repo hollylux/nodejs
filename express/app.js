@@ -50,11 +50,11 @@ app.get('/db', function (req, res) {
         });
         */
         
-        db.collection('Express').findOne({id:1},function(err, data){
-        //db.collection('Express').find(function(err, data){
+        //db.collection('Express').findOne({id:1},function(err, data){
+        db.collection('Express').find().toArray(function(err, items){
             if(err) throw err;
-            console.log(data);
-            res.send(data);
+            //console.log(items);
+            res.send(items);
         });
     });
 
